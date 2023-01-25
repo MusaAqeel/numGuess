@@ -1,3 +1,4 @@
+
 # Import pygame
 import pygame
 import random
@@ -5,14 +6,15 @@ import random
 # Initialize pygame
 pygame.init()
 
-
 # Set up the display
 screen = pygame.display.set_mode((1000, 1000))
 pygame.display.set_caption("Number Guessing Game")
 
-# Create a background color
+# Create color variables
 bg_color = pygame.Color('#ADD8E6')
-screen.fill(bg_color)
+color_inactive = pygame.Color('White')
+color_active = pygame.Color("#808080")
+color = color_inactive
 
 # Generate a random number for the user to guess
 num1 = random.randint(1, 100)
@@ -23,9 +25,6 @@ answer = (num1 + num2) // random.randint(1, 10)
 textbox_x, textbox_y = 100, 150
 textbox_width, textbox_height = 140, 32
 active = False
-color_inactive = pygame.Color('White')
-color_active = pygame.Color("#808080")
-color = color_inactive
 
 # Define the font for the text input box
 FONT = pygame.font.Font(None, 32)
