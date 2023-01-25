@@ -1,10 +1,10 @@
 # Import pygame
 import pygame
-import pygame.font
 import random
 
 # Initialize pygame
 pygame.init()
+
 
 # Set up the display
 screen = pygame.display.set_mode((1000, 1000))
@@ -23,7 +23,7 @@ answer = (num1 + num2) // random.randint(1, 10)
 textbox_x, textbox_y = 100, 150
 textbox_width, textbox_height = 140, 32
 active = False
-color_inactive = pygame.Color('#FFFFF')
+color_inactive = pygame.Color('White')
 color_active = pygame.Color("#808080")
 color = color_inactive
 
